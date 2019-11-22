@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-import static com.nc.consoleapp.consts.EnviromentVariables.*;
+import com.nc.consoleapp.consts.databaseVariables;
 
 public class DB {
     private static DB instance;
@@ -17,11 +17,11 @@ public class DB {
     }
 
     public Connection getConnection() throws SQLException {
-        String url = System.getenv(DB_URL);
-        String userName = System.getenv(USER_NAME);
-        String password = System.getenv(PASSWORD);
+        String url = databaseVariables.DB_URL;
+        String userName = databaseVariables.USER_NAME;
+        String password = databaseVariables.PASSWORD;
         try {
-            Connection connection = DriverManager.getConnection( "jdbc:mysql://localhost:3306/dbtest?useTimezone=true&serverTimezone=UTC&useSSL=false", "root", "test");
+            Connection connection = DriverManager.getConnection( url, userName, password);
             return connection;
         } catch (SQLException e){
             throw new SQLException(e);
