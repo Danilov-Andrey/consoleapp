@@ -1,6 +1,7 @@
 package com.nc.consoleapp.model;
 
 import com.nc.consoleapp.entities.Book;
+import com.nc.consoleapp.model.interfaces.Model;
 import com.nc.consoleapp.model.view.View;
 import com.nc.consoleapp.utils.DB;
 import com.nc.consoleapp.utils.Output;

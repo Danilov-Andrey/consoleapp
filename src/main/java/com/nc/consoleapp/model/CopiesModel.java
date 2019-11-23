@@ -1,15 +1,16 @@
 package com.nc.consoleapp.model;
 
 import com.nc.consoleapp.entities.Copies;
+import com.nc.consoleapp.model.interfaces.ReadUpdateModel;
 import com.nc.consoleapp.model.view.View;
 import com.nc.consoleapp.utils.DB;
 import com.nc.consoleapp.utils.Output;
 
 import java.sql.*;
 
-public class CopiesModel implements Model<Copies> {
-    public static Model instance;
-    public static Model getInstance(){
+public class CopiesModel implements ReadUpdateModel<Copies> {
+    public static ReadUpdateModel instance;
+    public static ReadUpdateModel getInstance(){
         if (instance == null){
             instance = new CopiesModel();
         }
@@ -69,12 +70,4 @@ public class CopiesModel implements Model<Copies> {
             DB.getInstance().closeConnection(connection);
         }
     }
-
-    @Override
-    public void delete(int id) throws SQLException {}
-
-    @Override
-    public void create(Copies object) throws SQLException {}
-
-
 }

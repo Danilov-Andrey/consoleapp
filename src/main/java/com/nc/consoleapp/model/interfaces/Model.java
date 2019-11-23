@@ -1,4 +1,4 @@
-package com.nc.consoleapp.model;
+package com.nc.consoleapp.model.interfaces;
 
 import java.sql.SQLException;
 

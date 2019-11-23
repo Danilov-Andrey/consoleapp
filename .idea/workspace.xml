@@ -2,10 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9912f529-282b-421a-9e78-9579096ce80e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nc/consoleapp/model/interfaces/ReadUpdateModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nc/consoleapp/model/AuthorModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nc/consoleapp/model/AuthorModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nc/consoleapp/model/BookModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nc/consoleapp/model/BookModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nc/consoleapp/model/CopiesModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nc/consoleapp/model/CopiesModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nc/consoleapp/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nc/consoleapp/model/interfaces/Model.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nc/consoleapp/model/PublisherModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nc/consoleapp/model/PublisherModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nc/consoleapp/utils/DB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nc/consoleapp/utils/DB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nc/consoleapp/menu/create/CreateMenuCommands.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nc/consoleapp/menu/create/CreateMenuCommands.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nc/consoleapp/menu/create/utils/CreateEntityCommands.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nc/consoleapp/menu/create/utils/CreateEntityCommands.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nc/consoleapp/menu/delete/DeleteMenuCommands.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nc/consoleapp/menu/delete/DeleteMenuCommands.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nc/consoleapp/menu/update/UpdateMenuCommands.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nc/consoleapp/menu/update/UpdateMenuCommands.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nc/consoleapp/menu/update/utils/GetUpdateInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nc/consoleapp/menu/update/utils/GetUpdateInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nc/consoleapp/model/AuthorModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nc/consoleapp/model/AuthorModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nc/consoleapp/model/BookModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nc/consoleapp/model/BookModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nc/consoleapp/model/CopiesModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nc/consoleapp/model/CopiesModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nc/consoleapp/model/PublisherModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nc/consoleapp/model/PublisherModel.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,8 +28,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -88,7 +100,9 @@
       <workItem from="1574346045418" duration="11772000" />
       <workItem from="1574411238074" duration="6093000" />
       <workItem from="1574434962785" duration="17750000" />
-      <workItem from="1574497919398" duration="3878000" />
+      <workItem from="1574497919398" duration="6392000" />
+      <workItem from="1574511999295" duration="11000" />
+      <workItem from="1574524651501" duration="310000" />
     </task>
     <servers />
   </component>
