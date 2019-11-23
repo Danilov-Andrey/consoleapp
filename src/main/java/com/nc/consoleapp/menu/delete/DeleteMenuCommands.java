@@ -1,7 +1,4 @@
 package com.nc.consoleapp.menu.delete;
-
-import com.nc.consoleapp.entities.Author;
-import com.nc.consoleapp.entities.Publisher;
 import com.nc.consoleapp.menu.Command;
 import com.nc.consoleapp.menu.GetIdCommand;
 import com.nc.consoleapp.model.AuthorModel;
@@ -34,7 +31,6 @@ public class DeleteMenuCommands implements Command {
             Output.printSeparator();
             Output.printOption(0, "Вернуться обратно.");
             Output.printInputSign();
-
             Scanner sc = new Scanner(System.in);
             int option = sc.nextInt();
             try {

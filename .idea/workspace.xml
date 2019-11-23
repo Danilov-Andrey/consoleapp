@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9912f529-282b-421a-9e78-9579096ce80e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nc/consoleapp/model/CopiesModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nc/consoleapp/model/CopiesModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nc/consoleapp/model/PublisherModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nc/consoleapp/model/PublisherModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nc/consoleapp/utils/DB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nc/consoleapp/utils/DB.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -84,7 +87,8 @@
       <workItem from="1574311621036" duration="13194000" />
       <workItem from="1574346045418" duration="11772000" />
       <workItem from="1574411238074" duration="6093000" />
-      <workItem from="1574434962785" duration="17299000" />
+      <workItem from="1574434962785" duration="17750000" />
+      <workItem from="1574497919398" duration="3878000" />
     </task>
     <servers />
   </component>
@@ -96,7 +100,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

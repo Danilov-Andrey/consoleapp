@@ -19,20 +19,20 @@ public class BookModel implements Model<Book> {
 
     private String get = "SELECT book.id, book.name, book.year, author.first_name, author.last_name," +
             " copies.book_count, copies.book_condition, publisher.name, author.id, publisher.id, copies.id " +
-            "from book join author on book.author_id = author.id " +
-            "join copies on book.id = copies.book_id join publisher on book.publisher_id = publisher.id";
+            "FROM book JOIN author ON book.author_id = author.id " +
+            "JOIN copies ON book.id = copies.book_id JOIN publisher ON book.publisher_id = publisher.id";
     private String update = "UPDATE book SET name = ? , year = ? WHERE id = ?;";
     private String check = "SELECT * FROM book WHERE id = ?";
     private String delete = "DELETE FROM book WHERE id = ?";
 
-    private String authorCheck = "SELECT * FROM author where first_name = ? and last_name = ? ";
-    private String publisherCheck = "SELECT * FROM publisher where name = ? ";
+    private String authorCheck = "SELECT * FROM author WHERE first_name = ? AND last_name = ? ";
+    private String publisherCheck = "SELECT * FROM publisher WHERE name = ? ";
     private String createAuthor = "INSERT INTO author (first_name, last_name) VALUES (? , ?)";
     private String createPublisher  = "INSERT INTO publisher (name) VALUES (?)";
     private String createBook = "INSERT INTO book (name, year, author_id, publisher_id) VALUES (?, ?, ?, ?)";
-    private String bookGetId = "SELECT * FROM book where name = ? and year = ? and author_id = ? and publisher_id = ? ";
+    private String bookGetId = "SELECT * FROM book where name = ? AND year = ? AND author_id = ? AND publisher_id = ? ";
     private String createCopies = "INSERT INTO copies (book_id, book_condition, book_count) VALUES (?, ?, ?)";
-    private String checkBook = "SELECT * FROM book where name = ? and year = ? and author_id = ? and publisher_id = ? ";
+    private String checkBook = "SELECT * FROM book WHERE name = ? AND year = ? AND author_id = ? AND publisher_id = ? ";
 
     @Override
     public void get() throws SQLException {
@@ -177,7 +177,6 @@ public class BookModel implements Model<Book> {
                 response.next();
 
                 bookId = response.getInt("id");
-
                 preparedStatement = connection.prepareStatement(createCopies);
                 preparedStatement.setInt(1, bookId);
                 preparedStatement.setInt(2, book.getCondition());

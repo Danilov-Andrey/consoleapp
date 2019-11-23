@@ -4,7 +4,6 @@ import com.nc.consoleapp.menu.Command;
 import com.nc.consoleapp.menu.create.utils.CreateEntityCommands;
 import com.nc.consoleapp.utils.Output;
 
-
 import java.util.Scanner;
 
 public class CreateMenuCommands implements Command {
@@ -28,10 +27,8 @@ public class CreateMenuCommands implements Command {
             Output.printSeparator();
             Output.printOption(0, "Вернуться обратно.");
             Output.printInputSign();
-
             Scanner sc = new Scanner(System.in);
             int option = sc.nextInt();
-
                 switch (option) {
                     case 1:
                         CreateEntityCommands.getInstance().createBook();
@@ -46,7 +43,6 @@ public class CreateMenuCommands implements Command {
                         isCreateMenuOpen = false;
                         break;
                 }
-
         }
         return null;
     }

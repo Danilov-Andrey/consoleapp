@@ -3,7 +3,6 @@ package com.nc.consoleapp.menu.update;
 import com.nc.consoleapp.menu.Command;
 import com.nc.consoleapp.menu.GetIdCommand;
 import com.nc.consoleapp.menu.update.utils.GetUpdateInfo;
-import com.nc.consoleapp.model.BookModel;
 import com.nc.consoleapp.utils.Output;
 
 import java.sql.SQLException;
@@ -22,7 +21,6 @@ public class UpdateMenuCommands implements Command {
     @Override
     public Object execute() {
         boolean isUpdateMenuOpen = true;
-        Command<Integer> getId = GetIdCommand.getInstance();
         while(isUpdateMenuOpen){
             Output.printSeparator();
             Output.printOption(1, "Обновить книгу.");
@@ -56,7 +54,6 @@ public class UpdateMenuCommands implements Command {
             } catch (SQLException e){
                 e.printStackTrace();
             }
-
         }
         return null;
     }

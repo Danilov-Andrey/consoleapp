@@ -22,7 +22,7 @@ public class AuthorModel implements Model<Author> {
     private String deleteAuthor = "DELETE FROM author WHERE id = ? ;";
     private String changeAuthor = "UPDATE author SET first_name = ? , last_name = ? WHERE id = ?;";
     private String getAuthors = "SELECT * FROM author";
-    private String getAuthor = "SELECT * FROM author where id = ?";
+    private String getAuthor = "SELECT * FROM author WHERE id = ?";
 
     @Override
     public void get() throws SQLException {
@@ -45,9 +45,7 @@ public class AuthorModel implements Model<Author> {
             PreparedStatement preparedStatement = connection.prepareStatement(getAuthor);
             preparedStatement.setInt(1, id);
             ResultSet response = preparedStatement.executeQuery();
-
             View.getInstance().renderAuthor(response);
-
         } catch (SQLException e){
             e.printStackTrace();
         } finally {
@@ -63,9 +61,7 @@ public class AuthorModel implements Model<Author> {
             preparedStatement.setString(1, author.getFirstName());
             preparedStatement.setString(2, author.getLastName());
             preparedStatement.setInt(3, author.getId());
-
             preparedStatement.executeUpdate();
-
             Output.printSuccess();
         } catch (SQLException e){
             e.printStackTrace();
@@ -81,7 +77,6 @@ public class AuthorModel implements Model<Author> {
             PreparedStatement preparedStatement = connection.prepareStatement(getAuthor);
             preparedStatement.setInt(1, id);
             ResultSet response = preparedStatement.executeQuery();
-
             if (response.next()){
                 preparedStatement = connection.prepareStatement(deleteAuthor);
                 preparedStatement.setInt(1, id);

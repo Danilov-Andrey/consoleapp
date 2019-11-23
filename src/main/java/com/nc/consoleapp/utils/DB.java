@@ -21,7 +21,7 @@ public class DB {
         String userName = databaseVariables.USER_NAME;
         String password = databaseVariables.PASSWORD;
         try {
-            Connection connection = DriverManager.getConnection( url, userName, password);
+            Connection connection = DriverManager.getConnection(url, userName, password);
             return connection;
         } catch (SQLException e){
             throw new SQLException(e);

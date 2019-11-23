@@ -29,7 +29,6 @@ public class CreateEntityCommands {
         int year;
         int condition;
         int count;
-
         Book book = new Book();
 
         System.out.println("Введите имя автора: ");

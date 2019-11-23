@@ -32,7 +32,7 @@ public class GetUpdateInfo {
         int id;
         String name;
         int year;
-        String checkBook = "SELECT * FROM book where id = ?;";
+        String checkBook = "SELECT * FROM book WHERE id = ?;";
         Connection connection = DB.getInstance().getConnection();
 
         System.out.println("Введите id книги: ");
@@ -116,7 +116,7 @@ public class GetUpdateInfo {
         int publisherId;
         String publisherName;
         Scanner sc = new Scanner(System.in);
-        String checkPublisher = "SELECT * FROM publisher where id = ?;";
+        String checkPublisher = "SELECT * FROM publisher WHERE id = ?;";
         Connection connection = DB.getInstance().getConnection();
         System.out.println("Введите id издателя: ");
         publisherId = sc.nextInt();
@@ -153,7 +153,7 @@ public class GetUpdateInfo {
         int copiesId;
         int copiesCondition;
         int copiesCount;
-        String checkCopies = "SELECT * FROM copies where id = ?;";
+        String checkCopies = "SELECT * FROM copies WHERE id = ?;";
         Connection connection = DB.getInstance().getConnection();
 
         System.out.println("Введите id копии: ");

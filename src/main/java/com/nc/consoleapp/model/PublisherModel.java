@@ -45,9 +45,7 @@ public class PublisherModel implements Model<Publisher> {
             PreparedStatement preparedStatement = connection.prepareStatement(getPublisher);
             preparedStatement.setInt(1, id);
             ResultSet response = preparedStatement.executeQuery();
-
             View.getInstance().renderPublisher(response);
-
         } catch (SQLException e){
             e.printStackTrace();
         } finally {
@@ -63,9 +61,7 @@ public class PublisherModel implements Model<Publisher> {
             preparedStatement.setString(1, publisher.getName());
             preparedStatement.setInt(2, publisher.getId());
             preparedStatement.execute();
-
             Output.printSuccess();
-
         } catch (SQLException e){
             e.printStackTrace();
         } finally {
@@ -103,16 +99,13 @@ public class PublisherModel implements Model<Publisher> {
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(checkPublisher);
             preparedStatement.setString(1, publisher.getName());
-
             ResultSet response = preparedStatement.executeQuery();
             if(response.next()){
                 System.out.println("Такой издатель уже есть.");
             } else {
                 preparedStatement = connection.prepareStatement(createPublisher);
                 preparedStatement.setString(1, publisher.getName());
-
                 preparedStatement.execute();
-
                 Output.printSuccess();
             }
         } catch (SQLException e){

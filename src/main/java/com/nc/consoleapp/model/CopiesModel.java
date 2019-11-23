@@ -17,7 +17,7 @@ public class CopiesModel implements Model<Copies> {
     }
 
     private String updateCopies = "UPDATE copies SET book_condition = ? , book_count = ? WHERE id = ?;";
-    private String getCopiesById = "SELECT * FROM copies where id = ?";
+    private String getCopiesById = "SELECT * FROM copies WHERE id = ?";
     private String getCopies = "SELECT * FROM copies";
 
     @Override
@@ -74,5 +74,7 @@ public class CopiesModel implements Model<Copies> {
     public void delete(int id) throws SQLException {}
 
     @Override
-    public void create(Copies copies) throws SQLException {}
+    public void create(Copies object) throws SQLException {}
+
+
 }
