@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9912f529-282b-421a-9e78-9579096ce80e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nc/consoleapp/consts/databaseVariables.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nc/consoleapp/consts/DatabaseVariables.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nc/consoleapp/menu/create/utils/CreateEntityCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nc/consoleapp/menu/create/utils/CreateEntityCommands.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nc/consoleapp/menu/delete/DeleteMenuCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nc/consoleapp/menu/delete/DeleteMenuCommands.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nc/consoleapp/menu/read/ReadMenuCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nc/consoleapp/menu/read/ReadMenuCommands.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nc/consoleapp/menu/update/utils/GetUpdateInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nc/consoleapp/menu/update/utils/GetUpdateInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nc/consoleapp/model/AuthorModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nc/consoleapp/repos/AuthorRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nc/consoleapp/model/BookModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nc/consoleapp/repos/BookRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nc/consoleapp/model/CopiesModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nc/consoleapp/repos/CopiesRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nc/consoleapp/model/PublisherModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nc/consoleapp/repos/PublisherRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nc/consoleapp/model/interfaces/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nc/consoleapp/repos/interfaces/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nc/consoleapp/model/interfaces/ReadUpdateModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nc/consoleapp/repos/interfaces/ReadUpdateModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nc/consoleapp/model/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nc/consoleapp/view/View.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nc/consoleapp/utils/DB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nc/consoleapp/utils/DB.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -102,7 +89,7 @@
       <workItem from="1574497919398" duration="6392000" />
       <workItem from="1574511999295" duration="11000" />
       <workItem from="1574524651501" duration="1118000" />
-      <workItem from="1574667467511" duration="606000" />
+      <workItem from="1574667467511" duration="1111000" />
     </task>
     <servers />
   </component>
