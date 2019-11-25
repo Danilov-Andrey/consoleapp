@@ -1,16 +1,16 @@
 package com.nc.consoleapp.repos;
 
 import com.nc.consoleapp.entities.Copies;
-import com.nc.consoleapp.repos.interfaces.ReadUpdateModel;
+import com.nc.consoleapp.repos.interfaces.ReadUpdateRepo;
 import com.nc.consoleapp.view.View;
 import com.nc.consoleapp.utils.DB;
 import com.nc.consoleapp.utils.Output;
 
 import java.sql.*;
 
-public class CopiesRepo implements ReadUpdateModel<Copies> {
-    public static ReadUpdateModel instance;
-    public static ReadUpdateModel getInstance(){
+public class CopiesRepo implements ReadUpdateRepo<Copies> {
+    public static ReadUpdateRepo instance;
+    public static ReadUpdateRepo getInstance(){
         if (instance == null){
             instance = new CopiesRepo();
         }

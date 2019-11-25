@@ -1,17 +1,17 @@
 package com.nc.consoleapp.repos;
 
 import com.nc.consoleapp.entities.Author;
-import com.nc.consoleapp.repos.interfaces.Model;
+import com.nc.consoleapp.repos.interfaces.Repo;
 import com.nc.consoleapp.view.View;
 import com.nc.consoleapp.utils.DB;
 import com.nc.consoleapp.utils.Output;
 
 import java.sql.*;
 
-public class AuthorRepo implements Model<Author> {
-    private static Model instance;
+public class AuthorRepo implements Repo<Author> {
+    private static Repo instance;
 
-    public static Model getInstance(){
+    public static Repo getInstance(){
         if (instance == null){
             instance = new AuthorRepo();
         }
