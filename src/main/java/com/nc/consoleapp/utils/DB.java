@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-import com.nc.consoleapp.consts.databaseVariables;
+import com.nc.consoleapp.consts.DatabaseVariables;
 
 public class DB {
     private static DB instance;
@@ -17,9 +17,9 @@ public class DB {
     }
 
     public Connection getConnection() throws SQLException {
-        String url = databaseVariables.DB_URL;
-        String userName = databaseVariables.USER_NAME;
-        String password = databaseVariables.PASSWORD;
+        String url = DatabaseVariables.DB_URL;
+        String userName = DatabaseVariables.USER_NAME;
+        String password = DatabaseVariables.PASSWORD;
         try {
             Connection connection = DriverManager.getConnection(url, userName, password);
             return connection;

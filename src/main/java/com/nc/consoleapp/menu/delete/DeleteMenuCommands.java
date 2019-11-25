@@ -1,9 +1,9 @@
 package com.nc.consoleapp.menu.delete;
 import com.nc.consoleapp.menu.Command;
 import com.nc.consoleapp.menu.GetIdCommand;
-import com.nc.consoleapp.model.AuthorModel;
-import com.nc.consoleapp.model.BookModel;
-import com.nc.consoleapp.model.PublisherModel;
+import com.nc.consoleapp.repos.AuthorRepo;
+import com.nc.consoleapp.repos.BookRepo;
+import com.nc.consoleapp.repos.PublisherRepo;
 import com.nc.consoleapp.utils.Output;
 
 import java.sql.SQLException;
@@ -36,13 +36,13 @@ public class DeleteMenuCommands implements Command {
             try {
                 switch (option){
                     case 1:
-                        BookModel.getInstance().delete(getId.execute());
+                        BookRepo.getInstance().delete(getId.execute());
                         break;
                     case 2:
-                        AuthorModel.getInstance().delete(getId.execute());
+                        AuthorRepo.getInstance().delete(getId.execute());
                         break;
                     case 3:
-                        PublisherModel.getInstance().delete(getId.execute());
+                        PublisherRepo.getInstance().delete(getId.execute());
                         break;
                     case 0:
                         isDeleteMenuOpen = false;

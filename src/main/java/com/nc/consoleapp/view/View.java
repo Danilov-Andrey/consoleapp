@@ -1,4 +1,4 @@
-package com.nc.consoleapp.model.view;
+package com.nc.consoleapp.view;
 
 import com.nc.consoleapp.entities.Author;
 import com.nc.consoleapp.entities.Book;

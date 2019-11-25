@@ -3,9 +3,9 @@ package com.nc.consoleapp.menu.create.utils;
 import com.nc.consoleapp.entities.Author;
 import com.nc.consoleapp.entities.Book;
 import com.nc.consoleapp.entities.Publisher;
-import com.nc.consoleapp.model.AuthorModel;
-import com.nc.consoleapp.model.BookModel;
-import com.nc.consoleapp.model.PublisherModel;
+import com.nc.consoleapp.repos.AuthorRepo;
+import com.nc.consoleapp.repos.BookRepo;
+import com.nc.consoleapp.repos.PublisherRepo;
 
 import java.sql.SQLException;
 import java.util.Scanner;
@@ -62,7 +62,7 @@ public class CreateEntityCommands {
         book.setCount(count);
 
         try {
-            BookModel.getInstance().create(book);
+            BookRepo.getInstance().create(book);
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -84,7 +84,7 @@ public class CreateEntityCommands {
         author.setLastName(lastName);
 
         try {
-            AuthorModel.getInstance().create(author);
+            AuthorRepo.getInstance().create(author);
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -101,7 +101,7 @@ public class CreateEntityCommands {
         publisher.setName(name);
 
         try {
-            PublisherModel.getInstance().create(publisher);
+            PublisherRepo.getInstance().create(publisher);
         } catch (SQLException e) {
             e.printStackTrace();
         }

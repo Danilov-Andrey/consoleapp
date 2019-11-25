@@ -2,10 +2,10 @@ package com.nc.consoleapp.menu.read;
 
 import com.nc.consoleapp.menu.Command;
 import com.nc.consoleapp.menu.GetIdCommand;
-import com.nc.consoleapp.model.AuthorModel;
-import com.nc.consoleapp.model.BookModel;
-import com.nc.consoleapp.model.CopiesModel;
-import com.nc.consoleapp.model.PublisherModel;
+import com.nc.consoleapp.repos.AuthorRepo;
+import com.nc.consoleapp.repos.BookRepo;
+import com.nc.consoleapp.repos.CopiesRepo;
+import com.nc.consoleapp.repos.PublisherRepo;
 import com.nc.consoleapp.utils.Output;
 
 import java.sql.SQLException;
@@ -46,28 +46,28 @@ public class ReadMenuCommands implements Command {
             try {
                 switch (option){
                     case 1:
-                        BookModel.getInstance().get();
+                        BookRepo.getInstance().get();
                         break;
                     case 2:
-                        AuthorModel.getInstance().get();
+                        AuthorRepo.getInstance().get();
                         break;
                     case 3:
-                        PublisherModel.getInstance().get();
+                        PublisherRepo.getInstance().get();
                         break;
                     case 4:
-                        CopiesModel.getInstance().get();
+                        CopiesRepo.getInstance().get();
                         break;
                     case 5:
-                        BookModel.getInstance().get(getId.execute());
+                        BookRepo.getInstance().get(getId.execute());
                         break;
                     case 6:
-                        AuthorModel.getInstance().get(getId.execute());
+                        AuthorRepo.getInstance().get(getId.execute());
                         break;
                     case 7:
-                        PublisherModel.getInstance().get(getId.execute());
+                        PublisherRepo.getInstance().get(getId.execute());
                         break;
                     case 8:
-                        CopiesModel.getInstance().get(getId.execute());
+                        CopiesRepo.getInstance().get(getId.execute());
                         break;
                     case 0:
                         isReadMenuOpen = false;

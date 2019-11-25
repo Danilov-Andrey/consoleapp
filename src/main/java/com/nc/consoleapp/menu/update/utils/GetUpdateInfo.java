@@ -4,10 +4,10 @@ import com.nc.consoleapp.entities.Author;
 import com.nc.consoleapp.entities.Book;
 import com.nc.consoleapp.entities.Copies;
 import com.nc.consoleapp.entities.Publisher;
-import com.nc.consoleapp.model.AuthorModel;
-import com.nc.consoleapp.model.BookModel;
-import com.nc.consoleapp.model.CopiesModel;
-import com.nc.consoleapp.model.PublisherModel;
+import com.nc.consoleapp.repos.AuthorRepo;
+import com.nc.consoleapp.repos.BookRepo;
+import com.nc.consoleapp.repos.CopiesRepo;
+import com.nc.consoleapp.repos.PublisherRepo;
 import com.nc.consoleapp.utils.DB;
 
 import java.sql.Connection;
@@ -58,7 +58,7 @@ public class GetUpdateInfo {
               book.setBookName(name);
               book.setYear(year);
 
-              BookModel.getInstance().update(book);
+              BookRepo.getInstance().update(book);
           } else {
               System.out.println("Такой книги нет.");
           }
@@ -101,7 +101,7 @@ public class GetUpdateInfo {
                 author.setLastName(authorLastName);
                 author.setId(authorId);
 
-                AuthorModel.getInstance().update(author);
+                AuthorRepo.getInstance().update(author);
             } else {
                 System.out.println("Такого автора нет.");
             }
@@ -138,7 +138,7 @@ public class GetUpdateInfo {
                 publisher.setId(publisherId);
                 publisher.setName(publisherName);
 
-                PublisherModel.getInstance().update(publisher);
+                PublisherRepo.getInstance().update(publisher);
             } else {
                 System.out.println("Такого издателя нет.");
             }
@@ -179,7 +179,7 @@ public class GetUpdateInfo {
                 copies.setCount(copiesCount);
                 copies.setCondition(copiesCondition);
 
-                CopiesModel.getInstance().update(copies);
+                CopiesRepo.getInstance().update(copies);
             } else {
                 System.out.println("Таких копии нет.");
             }

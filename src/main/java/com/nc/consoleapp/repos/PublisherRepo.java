@@ -1,37 +1,37 @@
-package com.nc.consoleapp.model;
+package com.nc.consoleapp.repos;
 
-import com.nc.consoleapp.entities.Author;
-import com.nc.consoleapp.model.interfaces.Model;
-import com.nc.consoleapp.model.view.View;
+import com.nc.consoleapp.entities.Publisher;
+import com.nc.consoleapp.repos.interfaces.Model;
+import com.nc.consoleapp.view.View;
 import com.nc.consoleapp.utils.DB;
 import com.nc.consoleapp.utils.Output;
 
 import java.sql.*;
 
-public class AuthorModel implements Model<Author> {
+public class PublisherRepo implements Model<Publisher> {
     private static Model instance;
 
     public static Model getInstance(){
         if (instance == null){
-            instance = new AuthorModel();
+            instance = new PublisherRepo();
         }
         return  instance;
     }
 
-    private String createAuthor = "INSERT INTO author (first_name, last_name) VALUES (?, ?);";
-    private String checkAuthor = "SELECT * FROM author WHERE first_name = ? AND last_name = ? ;";
-    private String deleteAuthor = "DELETE FROM author WHERE id = ? ;";
-    private String changeAuthor = "UPDATE author SET first_name = ? , last_name = ? WHERE id = ?;";
-    private String getAuthors = "SELECT * FROM author";
-    private String getAuthor = "SELECT * FROM author WHERE id = ?";
+    private String getPublishers = "SELECT * FROM publisher;";
+    private String getPublisher = "SELECT * FROM publisher WHERE id = ?;";
+    private String updatePublisher = "UPDATE publisher SET name = ? WHERE id = ?;";
+    private String createPublisher = "INSERT INTO publisher (name) VALUES (?);";
+    private String deletePublisher = "DELETE FROM publisher WHERE id = ?;";
+    private String checkPublisher = "SELECT  * FROM publisher WHERE name = ?;";
 
     @Override
     public void get() throws SQLException {
         Connection connection = DB.getInstance().getConnection();
         Statement statement = connection.createStatement();
         try {
-            ResultSet response = statement.executeQuery(getAuthors);
-            View.getInstance().renderAuthor(response);
+            ResultSet response = statement.executeQuery(getPublishers);
+            View.getInstance().renderPublisher(response);
         } catch (SQLException e){
             e.printStackTrace();
         } finally {
@@ -43,10 +43,10 @@ public class AuthorModel implements Model<Author> {
     public void get(int id) throws SQLException {
         Connection connection = DB.getInstance().getConnection();
         try{
-            PreparedStatement preparedStatement = connection.prepareStatement(getAuthor);
+            PreparedStatement preparedStatement = connection.prepareStatement(getPublisher);
             preparedStatement.setInt(1, id);
             ResultSet response = preparedStatement.executeQuery();
-            View.getInstance().renderAuthor(response);
+            View.getInstance().renderPublisher(response);
         } catch (SQLException e){
             e.printStackTrace();
         } finally {
@@ -55,14 +55,13 @@ public class AuthorModel implements Model<Author> {
     }
 
     @Override
-    public void update(Author author) throws SQLException {
+    public void update(Publisher publisher) throws SQLException {
         Connection connection = DB.getInstance().getConnection();
-        try {
-            PreparedStatement  preparedStatement  = connection.prepareStatement(changeAuthor);
-            preparedStatement.setString(1, author.getFirstName());
-            preparedStatement.setString(2, author.getLastName());
-            preparedStatement.setInt(3, author.getId());
-            preparedStatement.executeUpdate();
+        try{
+            PreparedStatement preparedStatement = connection.prepareStatement(updatePublisher);
+            preparedStatement.setString(1, publisher.getName());
+            preparedStatement.setInt(2, publisher.getId());
+            preparedStatement.execute();
             Output.printSuccess();
         } catch (SQLException e){
             e.printStackTrace();
@@ -74,19 +73,20 @@ public class AuthorModel implements Model<Author> {
     @Override
     public void delete(int id) throws SQLException {
         Connection connection = DB.getInstance().getConnection();
-        try{
-            PreparedStatement preparedStatement = connection.prepareStatement(getAuthor);
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(getPublisher);
             preparedStatement.setInt(1, id);
             ResultSet response = preparedStatement.executeQuery();
             if (response.next()){
-                preparedStatement = connection.prepareStatement(deleteAuthor);
+                preparedStatement = connection.prepareStatement(deletePublisher);
                 preparedStatement.setInt(1, id);
                 preparedStatement.execute();
                 Output.printSuccess();
             } else {
-                System.out.println("Такого автора нет.");
+                Output.printExtraInfo();
             }
-
+        } catch (SQLIntegrityConstraintViolationException e){
+            System.out.println("Нельзя удалить издателя.");
         } catch (SQLException e){
             e.printStackTrace();
         } finally {
@@ -95,19 +95,17 @@ public class AuthorModel implements Model<Author> {
     }
 
     @Override
-    public void create(Author author) throws SQLException {
+    public void create(Publisher publisher) throws SQLException {
         Connection connection = DB.getInstance().getConnection();
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement(checkAuthor);
-            preparedStatement.setString(1, author.getFirstName());
-            preparedStatement.setString(2, author.getLastName());
+            PreparedStatement preparedStatement = connection.prepareStatement(checkPublisher);
+            preparedStatement.setString(1, publisher.getName());
             ResultSet response = preparedStatement.executeQuery();
             if(response.next()){
-                System.out.println("Такой автор уже есть.");
+                System.out.println("Такой издатель уже есть.");
             } else {
-                preparedStatement = connection.prepareStatement(createAuthor);
-                preparedStatement.setString(1, author.getFirstName());
-                preparedStatement.setString(2, author.getLastName());
+                preparedStatement = connection.prepareStatement(createPublisher);
+                preparedStatement.setString(1, publisher.getName());
                 preparedStatement.execute();
                 Output.printSuccess();
             }
@@ -117,5 +115,4 @@ public class AuthorModel implements Model<Author> {
             DB.getInstance().closeConnection(connection);
         }
     }
-
 }
