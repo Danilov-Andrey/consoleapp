@@ -85,8 +85,6 @@ public class PublisherRepo implements Repo<Publisher> {
             } else {
                 Output.printExtraInfo();
             }
-        } catch (SQLIntegrityConstraintViolationException e){
-            System.out.println("Нельзя удалить издателя.");
         } catch (SQLException e){
             e.printStackTrace();
         } finally {
